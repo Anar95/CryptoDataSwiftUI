@@ -15,6 +15,7 @@
 		79F23A38297D4C340065F2E0 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F23A37297D4C340065F2E0 /* HomeView.swift */; };
 		79F23A3C297D4E1D0065F2E0 /* CirculeButtonFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F23A3B297D4E1D0065F2E0 /* CirculeButtonFile.swift */; };
 		79F23A3E297DBF810065F2E0 /* CircleButtonanimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F23A3D297DBF810065F2E0 /* CircleButtonanimation.swift */; };
+		79F23A41297DC5430065F2E0 /* CoinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F23A40297DC5430065F2E0 /* CoinModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		79F23A37297D4C340065F2E0 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		79F23A3B297D4E1D0065F2E0 /* CirculeButtonFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CirculeButtonFile.swift; sourceTree = "<group>"; };
 		79F23A3D297DBF810065F2E0 /* CircleButtonanimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonanimation.swift; sourceTree = "<group>"; };
+		79F23A40297DC5430065F2E0 /* CoinModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		79F23A20297C94FA0065F2E0 /* CryptoData */ = {
 			isa = PBXGroup;
 			children = (
+				79F23A3F297DC52A0065F2E0 /* Models */,
 				79F23A33297D4A810065F2E0 /* Core */,
 				79F23A30297CA2A20065F2E0 /* Extensions */,
 				79F23A21297C94FA0065F2E0 /* CryptoDataApp.swift */,
@@ -133,6 +136,14 @@
 				79F23A3D297DBF810065F2E0 /* CircleButtonanimation.swift */,
 			);
 			path = CircleButton;
+			sourceTree = "<group>";
+		};
+		79F23A3F297DC52A0065F2E0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				79F23A40297DC5430065F2E0 /* CoinModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +222,7 @@
 				79F23A3C297D4E1D0065F2E0 /* CirculeButtonFile.swift in Sources */,
 				79F23A22297C94FA0065F2E0 /* CryptoDataApp.swift in Sources */,
 				79F23A32297CA2B70065F2E0 /* Color.swift in Sources */,
+				79F23A41297DC5430065F2E0 /* CoinModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
