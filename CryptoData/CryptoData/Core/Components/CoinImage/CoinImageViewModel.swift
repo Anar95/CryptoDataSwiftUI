@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Combine
 
 class CoinImageViewModel: ObservableObject{
     
@@ -15,22 +16,22 @@ class CoinImageViewModel: ObservableObject{
       
     private let coin: CoinModel
     private let dataService: CoinImageService
-    private var cancellables = Set<AnyCancellable> ()
+    private var cancellables = Set<AnyCancellable>()
     
     init(coin: CoinModel) {
         self.coin = coin
-        self.dataService = CoinImageService(urlString: coin.image)
+        self.dataService = CoinImageService(coin: coin)
         self.addSubscribers()
         self.isLoading = true
     }
     private func addSubscribers() {
         
         dataService.$image
-            .sink { [weak self] ( ) in
+            .sink { [weak self] (_) in
                 self?.isLoading = false
             } receiveValue: { [weak self] (returnedImage) in
                 self?.image = returnedImage
             }
-            .store(in: &cancelllables)
+            .store(in: &cancellables)
     }
 }
