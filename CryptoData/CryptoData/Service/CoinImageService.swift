@@ -19,11 +19,11 @@ class CoinImageService{
     
     init(coin: CoinModel) {
         self.coin = coin
-        getCoinImage(urlString:  String)
+        getCoinImage()
         
        }
     
-     private func getCoinImage(urlString: String) {
+     private func getCoinImage() {
          guard let url = URL(string: coin.image)  else  {return}
             
         imageSubscription =  NetworkingManager.download(url: url)
