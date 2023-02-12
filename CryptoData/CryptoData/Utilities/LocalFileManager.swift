@@ -13,10 +13,10 @@ class LocalFileManager {
     static let instance = LocalFileManager()
     private init (){ }
     
-    func saveImage(image: UIImage) {
+    func saveImage(image: UIImage, imageName: String, folderName: String) {
         guard
             let data = image.pngData(),
-            let url = URL(string: "")
+            let url = getURLForImage(imageName: imageName, folderName: folderName )
         else {return}
         
         do {
@@ -35,11 +35,11 @@ class LocalFileManager {
         }
         return url.appendingPathExtension(folderName)
     }
-    private func getURLForImage(imageName: String) -> URL? {
+    private func getURLForImage(imageName: String, folderName: String) -> URL? {
         guard  let folderUrl = getURLForFolder(folderName: folderName ) else {
             return nil
         }
-        return folderURL.appendingPathComponent(imageName + ".png")
+        return folderUrl.appendingPathExtension(imageName + ".png")
     }
     
 }
