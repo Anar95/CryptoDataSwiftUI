@@ -19,10 +19,10 @@ class CoinImageService{
     
     init(coin: CoinModel) {
         self.coin = coin
-        getCoinImage()
+        getCoinImage(urlString:  String)
         
-            
-        }
+       }
+    
      private func getCoinImage(urlString: String) {
          guard let url = URL(string: coin.image)  else  {return}
             
