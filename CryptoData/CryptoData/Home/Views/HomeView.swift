@@ -56,6 +56,7 @@ extension HomeView{
                 .animation(.none)
                 .background(
                 CircleButtonAnimationView(animate: $showPortofolio) )
+               
                 
             Spacer()
             Text(showPortofolio ? "Portfolio" : "Live Pirces")
@@ -70,6 +71,7 @@ extension HomeView{
                 .onTapGesture {
                     withAnimation(.spring()){
                         showPortofolio.toggle()
+                            
                     }
                 }
         }
