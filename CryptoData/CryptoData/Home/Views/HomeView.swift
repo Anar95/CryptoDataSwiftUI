@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    
     @EnvironmentObject private var vm: HomeViewModel
     @State private var showPortofolio: Bool = false
     
@@ -23,7 +24,6 @@ struct HomeView: View {
                 columnTitles
                 
                 if !showPortofolio {
-                    
                     allCoinsList
                      .transition(.move(edge: .leading))
                 }
